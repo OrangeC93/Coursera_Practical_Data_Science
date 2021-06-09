@@ -38,6 +38,7 @@ Glue Data Catalog
 
 Athena
 - Query data in S3
+  - When you register an Amazon Athena table with your S3 data, Athena uses the AWS Glue Data Catalog to store the schema and table-to-S3 mapping
 - Using SQL
   - Complex analytical queries
   - Gigabytes > Terabytes > Petabytes
