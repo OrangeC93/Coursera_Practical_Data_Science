@@ -8,3 +8,37 @@
   - concept drift
 
 ## Measuring statistical bias
+- Class Imbalance
+  - Measure the imbalance in the **number of members** between different facet values
+  - Does a product_category has disproportionately more reviews thant others
+- Difference in Proportions of Labels(DPL)
+  - Measures the imbalance of **positive outcomes** between different facet values
+  - Does a product_category has disproportionately higher ratings than others
+
+## Detecting statistical bias with Amazon Wrangler
+Data Wrangler provides you with capabilities to connect to various different sources for your data, visualize the data and transform the data by applying any number of transformations in the Data Wrangler environment. 
+
+And detect statistical bias in your data sets and generate reports about the bias detected in those data sets. 
+
+It also provides capabilities to provide feature importance calculations on your training data set.
+## Detecting statistical bias with Amazon SageMaker
+- clarify.SageMakerClarifyProcessor()
+- clarify.DataConfig()
+- clarify.BiasConfig()
+- clarify.run_pre_training_bias()
+
+## Difference between Clarify and SageMaker
+- Data Wrangler, provides you with more of a **UI based visual experience**. So, if you would like to connect to multiple data sources and explore your data in more visual format and configure what goes into your bias reports by making selections from drop down boxes and option buttons. And finally, launch the bias detection job using a button click, Data Wrangler is the tool for you. Keep in mind that Data Wrangler is only using a subset of your data to detect bias in that data set.
+- SageMaker Clarify provides you with more of an API based approach. Additionally, Clarify also provides you with the ability to scale out the bias detection process. SageMaker Clarify uses a construct called processing jobs that allow you to configure a distributed cluster to execute your bias detection job at scale. So, if you're thinking of large volumes of data, for example, millions of millions of rows of product reviews and you want to explore that data set for bias. Then, SageMaker Clarify is the tool for you, so that you can take advantage of the scale and capacity offered by Cloud.
+
+## Feature Importance (SHAP)
+Open Source Framework - SHAP
+- Shapely values based on game theory
+  - The individual players would be the individual features that make up the data set and the outcome of the play would be the machine learning model prediction. So using the same concept, you can explain how the predictions will correlate to the individual feature values that make up your training data set
+- Explain predictions of a ML model
+  - Each feature value of training data instance is a player in a game
+  - ML prediction is the payout
+- Local vs global explanations
+  - While the local explanation focuses on indicating how an individual feature contributes to the final model. The global explanation takes a much more comprehensive view in trying to understand how the data in its entirety contributes to the final outcome from the machine learning model.
+
+So, after you see this feature importance, maybe you have an opportunity to go back and fix your data set and do more feature engineering. Feature engineering task like dropping some of the columns that are not contributing here at all, so that you can reduce the dimensions of your training data set and perform training much faster. There is also an opportunity to combine fields, maybe combining the positive feedback count and the recommended indicator to arrive at a new feature could improve your F1 score or the final model itself.
