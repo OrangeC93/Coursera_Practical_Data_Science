@@ -24,3 +24,12 @@ Programmatically:
 - AWS SDK
 - Amazon SageMaker Python SDK
 - SageMaker Studio
+
+Launch the Amazon SageMaker Autopilot Job
+![image](pic/autopilot_job.png)
+
+Monitor Progress in Amazon SageMaker
+![image](pic/monitor_progess.png)
+
+## Evaluating output
+![image](pic/autopilot_output.png)
