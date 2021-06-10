@@ -32,7 +32,7 @@ It also provides capabilities to provide feature importance calculations on your
 - SageMaker Clarify provides you with more of an API based approach. Additionally, Clarify also provides you with the ability to scale out the bias detection process. SageMaker Clarify uses a construct called processing jobs that allow you to configure a distributed cluster to execute your bias detection job at scale. So, if you're thinking of large volumes of data, for example, millions of millions of rows of product reviews and you want to explore that data set for bias. Then, SageMaker Clarify is the tool for you, so that you can take advantage of the scale and capacity offered by Cloud.
 
 ## Feature Importance (SHAP)
-Open Source Framework - SHAP
+Open Source Framework - [SHAP](https://shap.readthedocs.io/en/latest/)
 - Shapely values based on game theory
   - The individual players would be the individual features that make up the data set and the outcome of the play would be the machine learning model prediction. So using the same concept, you can explain how the predictions will correlate to the individual feature values that make up your training data set
 - Explain predictions of a ML model
