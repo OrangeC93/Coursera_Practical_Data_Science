@@ -18,3 +18,9 @@ Deploy&Manage
 
 ![image](pic/automl_scenario.png)
 
+## Running experiments with Amazon SageMaker AutoPilot
+Programmatically:
+- AWS CLI
+- AWS SDK
+- Amazon SageMaker Python SDK
+- SageMaker Studio
