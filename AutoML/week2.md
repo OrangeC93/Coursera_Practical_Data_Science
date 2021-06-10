@@ -2,9 +2,9 @@
 - Activity Bias: social media content
 - Societal Bias: human generated content
 - Selection Bias: feedback loop
-- Data Drift
-  - covariant drift
-  - prior probabiity
+- Data Drift: when the distribution of data in a deployed machine learning system changes statistically quickly enough to be very different from the initial set of data.
+  - covariant drift(x)
+  - prior probabiity(y)
   - concept drift
 
 ## Measuring statistical bias
