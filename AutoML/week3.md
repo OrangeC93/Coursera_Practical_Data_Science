@@ -29,7 +29,17 @@ Launch the Amazon SageMaker Autopilot Job
 ![image](pic/autopilot_job.png)
 
 Monitor Progress in Amazon SageMaker
-![image](pic/monitor_progess.png)
+![image](pic/monitor_progress.png)
 
 ## Evaluating output
 ![image](pic/autopilot_output.png)
+
+## Model Host
+Host a Model Endpoint:
+![image](pic/host_a_model_endpoint.png)
+
+Deploy Inference Pipelien:
+![image](pic/deploy_inference_pipeline.png)
+
+Inference Pipelien:
+![image](pic/inference_pipeline.png)
