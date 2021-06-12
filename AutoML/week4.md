@@ -36,3 +36,8 @@ GPT is based on the transformer architecture but performs to training steps. Fir
 #### BERT
 BERT, in contrast to GPT is truly bidirectional. In the unsupervised training step, BERD learns representations from unlabeled text, from left to right and right to left contexts
 
+## Train a text classifier
+Train and Tune
+![image](pic/train_tune.png)
+Deploy and Manage
+![image](pic/deploy_manage.png)
