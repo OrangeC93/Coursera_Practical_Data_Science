@@ -16,4 +16,4 @@ Transformation
 - Transform: non Numerical features
 
 ## Feature Engineering Pipeline
-
+![image](pic/feature_engineering_piepeline.png)
