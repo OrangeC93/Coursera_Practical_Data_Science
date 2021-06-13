@@ -20,3 +20,7 @@ Transformation
 
 ## BERT: Bidirectional Encoder Representations from Transformers
 ![image](pic/example_bert.png)
+
+## SageMaker Processing
+Execute preprocessing, post processing, model evaluation
+![image](pic/sagemaker_processing.png)
