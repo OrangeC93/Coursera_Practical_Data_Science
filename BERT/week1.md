@@ -24,3 +24,5 @@ Transformation
 ## SageMaker Processing
 Execute preprocessing, post processing, model evaluation
 ![image](pic/sagemaker_processing.png)
+
+![image](pic/sagemaker_processing2.png)
