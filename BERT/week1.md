@@ -17,3 +17,6 @@ Transformation
 
 ## Feature Engineering Pipeline
 ![image](pic/feature_engineering_piepeline.png)
+
+## BERT: Bidirectional Encoder Representations from Transformers
+![image](pic/example_bert.png)
