@@ -36,4 +36,47 @@ Fine tuning is generally **faster** than pre training as the model doesn't have 
 In the fine-tuning step, we need configure the model for the actual NLP task, such as question and answer, text classification, or a named entity recognition. Fine-tuning is implemented as supervised learning and no masking or next sentence prediction happens. As a result, fine-tuning is very fast and requires a relatively small number of samples or product reviews.
 ![image](pic/RoBERTa_model.png)
 
+## Train a custom model with Amazon SageMaker
+![image](pic/bring_own_script.png)
 
+#### Configure dataset and metrics
+![image](pic/dataset_metrics.png)
+
+#### Configure model hyperparameters
+![image](pic/hyperparameters.png)
+
+#### Provide training script
+![image](pic/provide_training1.png)
+![image](pic/provide_training2.png)
+![image](pic/provide_training3.png)
+![image](pic/provide_training4.png)
+
+#### Fit model
+![image](pic/fit_model.png)
+
+## Debug and Profile models
+![image](pic/debug_profile_models.png)
+
+#### Detect common training errors
+Vanishing or explode ingredients: 
+- DNN learn through back propagation, in which the models losses trace back through the network. The neurons weights are modified in order to minimize the loss. If the network is too deep, however, the learning algorithm can spend its whole lost epoch on the top layers and weights in the lower layers, never get updated. That's the **vanishing gradient problem**. In return, the learning algorithm might trace a series of errors to the same neuron resulting in a large modification to that neurons wade that it imbalances the network. That's the **exploding gradient problem**.
+
+Bad Initialization
+- Initialization assigns random values to the model parameters. If all parameters have the same initial value, they received the same gradient and the model is unable to learn. Initializing parameters with values that are too small or too large may lead to vanishing or exploding gradients again.
+
+Overfitting
+- If the model's performance improves on a training set but not on a validation data set, it's a clear indication that the model is overfitting. If the model's performance initially improves on the validation set but then begins to fall off, training needs to stop to prevent the overfitting.
+
+
+#### Monitor and profile system resource utilization
+System resources can help you answer how many GPU, CPU, network and memory resources your model training consumes more. Specifically, it helps you to detect and alert you on bottlenecks so you can quickly take corrective actions. 
+
+Here is an overview of potential bottlenecks. These could include I/O bottlenecks when loading your data. CPU or memory bottlenecks when processing the data and GPU bottlenecks or maybe underutilization during model training.
+
+
+![image](pic/potential_bottleneck.png)
+
+#### Analyze errors and take actions
+- Stop model training when an issue is found
+- Send notification iva email an issue is found
+- Send a notification via text message when an issue is found
