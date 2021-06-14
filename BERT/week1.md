@@ -35,3 +35,10 @@ Feature store at a very high level is a repository, to store engineered features
 - nd finally, you want the feature store to be **discoverable** so that any team member can come in and search for the features they want, and use the search results in their own machine learning projects. 
 
 We can architect design and build such a feature store using mechanisms like a database for persistence and APIs for creating, retrieving, and deleting the features. Or, you can use a AWS tool like Amazon Sagemaker Feature Store, which is a managed service that provides a purpose belt, feature store.
+
+#### create
+![image](pic/feature_store_create.png)
+#### ingest
+![image](pic/feature_store_ingest.png)
+#### retrieve
+![image](pic/feature_store_retrieve.png)
