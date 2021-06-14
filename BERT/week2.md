@@ -80,3 +80,25 @@ Here is an overview of potential bottlenecks. These could include I/O bottleneck
 - Stop model training when an issue is found
 - Send notification iva email an issue is found
 - Send a notification via text message when an issue is found
+
+## Debug and Profile Models with Amazon SageMaker Debugger
+#### Amazon SageMaker Debugger
+Capture real-time dubugging data during model training in Amazon SageMaker
+- System metrics
+  - CPUT and GPU(and memory) utilization
+  - Network metrics
+  - Data input and output(I/O) metrics 
+- Framework metrics
+  - Convolutional opesrations in forward pass
+  - Batch normalization operations in backward pass
+  - Data loader processes between steps
+  - Gradient descent algorithm operations
+- Output tensors
+  - Scalar values(accuracy and loss)
+  - Matrics(weights, gradients, input layers, and output layers)
+
+![image](pic/debugger.png)
+![image](pic/debugger_build_in_rules.png)
+
+#### In code
+Set up the rules and profiles then add to estimator, you can have a profiling report for which you could download while training or after training.
