@@ -50,4 +50,21 @@ Aritifacts:
 - Artifacts can be the output of a step or a task that can be consumed by the next step in your pipeline. Or they can even be deployed directly for consumption by other applications or systems.
 ![image](pic/artifacts.png)
 
-## 
+## Amazon SageMaker Pipelines
+SageMaker Pipelines has 3 components:
+- pipeline, model registry, project
+![image](pic/pipeline_components.png)
+
+Pipelines:
+- Create pipelines to build and evaluate models
+- Python SDK for building workflows
+- Pipeline visualization available through Amazon SageMaker Studio
+- Fully managed pipelines-no servers to manage
+
+Model Registry:
+- Catalog models for production
+- Manage model versions & metadata
+- Manage the approval status of a model
+- Trigger model deployment pipeline
+
+![image](pic/configure_pipeline.png)
