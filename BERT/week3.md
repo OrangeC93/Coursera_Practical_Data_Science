@@ -27,7 +27,7 @@ Train & Tune:
 
 Deploy Models:
 - model deployment & consumption
-- ![image](pic/pipeline_deploy2.png)
+![image](pic/pipeline_deploy2.png)
 - logging & monitoring
 ![image](pic/pipeline_deploy.png)
 ## Model Lineage & Artifact Tracking
@@ -53,7 +53,7 @@ Aritifacts:
 ## Amazon SageMaker Pipelines
 SageMaker Pipelines has 3 components:
 - pipeline, model registry, project
-![image](pic/pipeline_components.png)
+![image](pic/component.png)
 
 Pipelines:
 - Create pipelines to build and evaluate models
