@@ -29,5 +29,5 @@ Hyperband
 - Repeat until max_iterations reched or one candidate left
 - **Spend time efficient, might discard good candidates early that converge slowly**
 
-AWS SageMaker Hyperparamter Tuning(HPT)
-![image](/pic/aws_hpt.png)
+#### AWS SageMaker Hyperparamter Tuning(HPT)
+![image](pic/aws_hpt.png)
