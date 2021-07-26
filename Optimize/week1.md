@@ -1,5 +1,5 @@
 ## Advanced Model Traning and Tuning
-#### Popular Algorithms for Automatic Model Tuning
+### Popular Algorithms for Automatic Model Tuning
 Grid search
 - Define sets of hyperparameters
 - Test **every** combination
@@ -29,7 +29,7 @@ Hyperband
 - Repeat until max_iterations reched or one candidate left
 - **Spend time efficient, might discard good candidates early that converge slowly**
 
-#### AWS SageMaker Hyperparamter Tuning(HPT)
+### AWS SageMaker Hyperparamter Tuning(HPT)
 ![image](pic/aws_hpt.png)
 
 #### Steps
@@ -67,3 +67,56 @@ Best Practices-Monitoring Training Resourses
 - Require empirical testing
 - Amazon CW metrics
 - Insights from Amazon SageMaker Debugger
+
+## ML model training challenges
+### Checkpointing
+#### Machine learning  Checkingpoiting
+- Save state of ML models during training
+- Checkpoints: snapshots of the models
+  - Model architecture
+  - Model weights
+  - Training configurations
+  - Optimizer
+- Frequency and number of checkpoints
+
+#### Amazon SageMaker Managed Spot
+![image](pic/checkpoint.png)
+
+#### Distributed Training Strategies
+![image](pic/distributed_training.png)
+Data Parallelism
+- Training data split up
+- Model replicated on all nodes
+
+Model Parallelism
+- Training data replicated
+- Model split
+![image](pic/sagemaker_distribution_eg.png) 
+
+Choosing a distributed strategy
+![image](pic/distributed_choose.png)
+
+### Custom Algorithms with Amazon SageMaker
+#### Build in Algorithm & Script Mode PyTorch Container
+
+#### Bring your own container-steps
+Code
+- Algorithm
+- Training
+- Inference
+
+Containerize
+- algorithm_nae = tf-custom-test
+- docker build -t ${algorithm_name}
+
+Register with Amazon ECR
+- aws ecr create-repository --repository-name "${algorithm_name}" >/dev/null
+- fullname = "${account}.dkr.ecr${region}.amazonaws.com/${algorithm_name}:latest"
+- docker push ${fullname}
+
+
+Create Estimator
+byoc_image_uri = '{}.dkr.ecr.{}.{}/{}'.format(account_id, region, uri_suffix, ecr_repository+tag)
+estimator = Estimator(image_name=byoc_image_uri,...)
+
+![image](pic/build_in_own_script.png)
