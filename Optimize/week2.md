@@ -3,25 +3,7 @@
 Deployment options
 ![image](pic/deployment_options.png)
 
-### Model Monitoring using Amazon SageMaker Model Monitor
-![image](pic/monitor_type.png)
 
-Data Quality Monitor
-- Monitor when inference data drifts away from baseline(training) data
-- Model Monitor uses, Deequ, an open source libaray built on Apache Spark
-![image](pic/data_quality_monitor.png)
-
-Model Quality Monitor
-- Monitor model quality by comparing model predictions with ground truth labels
-
-Statistical Bias Drift
-- Monitor predictions for statistical bias
-- Amazon SageMaker Clarify integrates with Amazon SageMaker Model Monitor to detect statistical bias drift
-
-Feature Attribution Monitor
-- Monitor features contributing to predictions over time
-- Amazon SageMaker Clarify Clarify integrates with Amazon SageMaker Model Monitor to detect feature attribution drift
-- Utilizes SHAP for baselining
 
 ### Model Deployment Strategies
 Blue/Green: shift all traffic to the new model
@@ -101,3 +83,37 @@ Implement transformations code before calling hosted model
 Implement data transformers in Inference Pipeline
 - keep training and inference code in sync
 ![image](pic/integration3.png)
+
+### Monitoring ML Workloads
+#### Why model monitoring: model degrade over time
+![image](pic/model_monitor.png)
+- Concept Drift
+- Data Drift
+![image](pic/concept_drift.png)
+![image](pic/data_drift.png)
+
+
+#### System monitoring: ensure your model and supporting resources are functioning as expected
+- eg model latency, system metrics, ml pipeline
+
+#### Monitoring Impact on Business Objectives: ensure your model ahs impact on business object
+
+### Model Monitoring using Amazon SageMaker Model Monitor
+![image](pic/monitor_type.png)
+
+Data Quality Monitor
+- Monitor when inference data drifts away from baseline(training) data
+- Model Monitor uses, Deequ, an open source libaray built on Apache Spark
+![image](pic/data_quality_monitor.png)
+
+Model Quality Monitor
+- Monitor model quality by comparing model predictions with ground truth labels
+
+Statistical Bias Drift
+- Monitor predictions for statistical bias
+- Amazon SageMaker Clarify integrates with Amazon SageMaker Model Monitor to detect statistical bias drift
+
+Feature Attribution Monitor
+- Monitor features contributing to predictions over time
+- Amazon SageMaker Clarify Clarify integrates with Amazon SageMaker Model Monitor to detect feature attribution drift
+- Utilizes SHAP for baselining
