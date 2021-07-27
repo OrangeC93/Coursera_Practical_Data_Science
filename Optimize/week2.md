@@ -93,9 +93,11 @@ Implement data transformations in client application
 - difficult to scale and mange
 - response may need to be transformed (1=>positive)
 ![image](pic/integration1.png)
+
 Implement transformations code before calling hosted model
 - need to ensure tranformation code stays in sync with training code
 ![image](pic/integration2.png)
+
 Implement data transformers in Inference Pipeline
 - keep training and inference code in sync
 ![image](pic/integration3.png)
