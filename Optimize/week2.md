@@ -32,7 +32,7 @@ Blue/Green: shift all traffic to the new model
 Shadow/Challenger: run multiple versions in parallel with one serving live traffic
 - Parallel prediction request traffic
 - Validate new version without impact
-![image](pic/challenger.png)
+![image](pic/shadow_challenger.png)
 
 Canary: split traffic to compare model versions with target groups/users
 - Split traffic
